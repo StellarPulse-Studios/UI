@@ -1,0 +1,10 @@
+.Spinny {
+    rotate: 7.2E+09deg;
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.Spinnyanti {
+    rotate: -360deg;
+}
