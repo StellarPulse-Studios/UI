@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PressSpace1st : MonoBehaviour{
-    
+    bool is1stPagePressed;  
     void Start()
     {
 
@@ -12,7 +13,7 @@ public class PressSpace1st : MonoBehaviour{
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(is1stPagePressed)
         {
             GoToNextScene();
         }
@@ -22,4 +23,11 @@ public class PressSpace1st : MonoBehaviour{
         int currentSceneIndex=SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex+1);
     }    
+
+   private void OnFirstPage(InputValue input)
+    {
+        is1stPagePressed = input.isPressed;
+    } 
 }
+
+
