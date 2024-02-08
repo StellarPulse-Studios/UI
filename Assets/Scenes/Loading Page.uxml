@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgba(10, 9, 9, 0); background-image: url(&apos;project://database/Assets/Scenes/wallpaper2you_372344.jpg?fileID=2800000&amp;guid=2a6b0e69ff57c9e4eaf27c9390047b6c&amp;type=3#wallpaper2you_372344&apos;); -unity-background-scale-mode: scale-to-fit;">
+        <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Scenes/loading.png?fileID=2800000&amp;guid=27873701cb4bc604a9a471fdd8b304c1&amp;type=3#loading&apos;); width: 90px; height: 100px; max-width: 90px; max-height: 100px; bottom: -400px; right: -950px; min-width: 90px; min-height: 100px;" />
+    </ui:VisualElement>
+</ui:UXML>
