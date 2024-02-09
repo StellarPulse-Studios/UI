@@ -1,10 +1,87 @@
-.Spinny {
-    rotate: 7.2E+09deg;
-    transition-property: all;
-    transition-timing-function: ease;
-    transition-delay: 0s;
+.button-continue {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 17%;
+    height: 8%;
+    bottom: -25%;
+    background-color: rgb(253, 253, 253);
 }
 
-.Spinnyanti {
-    rotate: -360deg;
+.button-continue:hover {
+    scale: 1.1 1.1;
+}
+
+.button-continue:active {
+    background-color: rgba(101, 101, 101, 0.99);
+}
+
+.button-newgame {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 17%;
+    height: 8%;
+    bottom: -30%;
+    background-color: rgb(255, 249, 249);
+}
+
+.button-newgame:hover {
+    scale: 1.1 1.1;
+}
+
+.button-newgame:active {
+    background-color: rgb(114, 113, 113);
+}
+
+.button-options {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 17%;
+    height: 8%;
+    bottom: -35%;
+    background-color: rgb(249, 245, 245);
+}
+
+.button-options:hover {
+    scale: 1.1 1.1;
+}
+
+.button-options:active {
+    background-color: rgb(112, 110, 110);
+}
+
+.button-exitgame {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 17%;
+    height: 8%;
+    bottom: -40%;
+    background-color: rgb(247, 242, 242);
+}
+
+.button-exitgame:hover {
+    scale: 1.1 1.1;
+}
+
+.button-exitgame:active {
+    background-color: rgb(106, 105, 105);
 }
