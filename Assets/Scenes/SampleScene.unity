@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uidoc: {fileID: 1688950453}
-  a: 50
+  a: 0
 --- !u!114 &1688950453
 MonoBehaviour:
   m_ObjectHideFlags: 0
