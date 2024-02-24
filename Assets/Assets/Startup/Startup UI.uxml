@@ -12,7 +12,7 @@
         <ui:Button text="Options" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Options" class="button-options" />
         <ui:Button text="Exit Game" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ExitGame" class="button-exitgame" />
     </ui:VisualElement>
-    <ui:VisualElement name="Settings" style="flex-grow: 1; display: flex; background-color: rgb(0, 0, 0);">
+    <ui:VisualElement name="Settings" style="flex-grow: 1; display: none; background-color: rgb(0, 0, 0);">
         <ui:Button text="Game Play" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Gameplay" class="button-gameplay" />
         <ui:Button text="Camera&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Camera" class="button-camera" />
         <ui:Button text="Audio" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Audio" class="button-audio" />
@@ -20,5 +20,8 @@
         <ui:Button text="View Control" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ViewControl" class="button-viewcontrol" />
         <ui:Button text="Change Control" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChangeControl" class="button-changecontrol" />
         <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Credits" class="button-credits" />
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; width: 414px;">
+        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
     </ui:VisualElement>
 </ui:UXML>
