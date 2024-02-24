@@ -242,3 +242,115 @@
 .button-credits:hover {
     scale: 1.3 1.3;
 }
+
+.button-weapons {
+    width: 63px;
+    height: 30px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 10px;
+    left: 49px;
+    top: -37px;
+}
+
+.button-weapons:active {
+}
+
+.button-weapons:hover {
+}
+
+.button-armour {
+    width: 63px;
+    height: 30px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 10px;
+    left: 112px;
+    top: -72px;
+}
+
+.button-armour:active {
+}
+
+.button-armour:hover {
+}
+
+.button-skills {
+    width: 63px;
+    height: 30px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 11px;
+    left: 175px;
+    top: -107px;
+}
+
+.button-skills:active {
+}
+
+.button-skills:hover {
+}
+
+.button-map {
+    width: 63px;
+    height: 30px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 11px;
+    left: 237.5px;
+    top: -141.5px;
+}
+
+.button-map:active {
+}
+
+.button-map:hover {
+}
+
+.button-goals {
+    width: 63px;
+    height: 30px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 11px;
+    left: 300px;
+    top: -176px;
+}
+
+.button-goals:active {
+}
+
+.button-goals:hover {
+}
+
+.button-codex {
+    width: 63px;
+    height: 30px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 10px;
+    left: 363px;
+    top: -211px;
+}
+
+.button-codex:active {
+}
+
+.button-codex:hover {
+}
+
+.button-resources {
+    width: 66px;
+    height: 30px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    font-size: 10px;
+    top: -246px;
+    left: 426px;
+}
+
+.button-resources:active {
+}
+
+.button-resources:hover {
+}

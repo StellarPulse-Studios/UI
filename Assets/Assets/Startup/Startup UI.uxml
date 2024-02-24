@@ -21,7 +21,15 @@
         <ui:Button text="Change Control" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChangeControl" class="button-changecontrol" />
         <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Credits" class="button-credits" />
     </ui:VisualElement>
-    <ui:VisualElement style="flex-grow: 1; width: 414px;">
-        <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(0, 0, 0);">
+        <ui:Label tabindex="-1" text="    L1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(217, 217, 217); width: 50px; height: 29px; top: -3px; text-overflow: ellipsis;" />
+        <ui:Button text="WEAPONS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-weapons" />
+        <ui:Button text="ARMOUR" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-armour" />
+        <ui:Button text="SKILLS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-skills" />
+        <ui:Button text="MAP" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-map" />
+        <ui:Button text="GOALS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-goals" />
+        <ui:Button text="CODEX" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-codex" />
+        <ui:Button text="RESOURCES" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-resources" />
+        <ui:Label tabindex="-1" text="    R1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(217, 217, 217); width: 50px; height: 29px; left: 493.5px; top: -282px; white-space: normal; text-overflow: ellipsis;" />
     </ui:VisualElement>
 </ui:UXML>
