@@ -21,15 +21,15 @@
         <ui:Button text="Change Control" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChangeControl" class="button-changecontrol" />
         <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Credits" class="button-credits" />
     </ui:VisualElement>
-    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(0, 0, 0);">
-        <ui:Label tabindex="-1" text="    L1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(217, 217, 217); width: 50px; height: 29px; top: -3px; text-overflow: ellipsis;" />
-        <ui:Button text="WEAPONS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-weapons" />
-        <ui:Button text="ARMOUR" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-armour" />
-        <ui:Button text="SKILLS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-skills" />
-        <ui:Button text="MAP" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-map" />
-        <ui:Button text="GOALS" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-goals" />
-        <ui:Button text="CODEX" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-codex" />
-        <ui:Button text="RESOURCES" parse-escape-sequences="true" display-tooltip-when-elided="true" class="button-resources" />
-        <ui:Label tabindex="-1" text="    R1" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgb(217, 217, 217); width: 50px; height: 29px; left: 493.5px; top: -282px; white-space: normal; text-overflow: ellipsis;" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(0, 0, 0); width: 836px; font-size: 16px; -unity-font-style: bold; -unity-text-align: upper-left; position: relative;">
+        <ui:Label tabindex="-1" text="    L1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="L1" style="background-color: rgb(217, 217, 217); width: 60px; height: 45px; top: -2px; text-overflow: ellipsis; -unity-text-align: upper-left; left: 0; font-size: 18px; margin-left: 2px; padding-left: -2px; padding-right: 4px;" />
+        <ui:Button text="WEAPONS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="WEAPON" class="button-weapons" style="width: 120px; height: 45px; font-size: 14px; left: 60px; top: -51.5px;" />
+        <ui:Button text="ARMOUR" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ARMOUR" class="button-armour" style="width: 151px; height: 45px; font-size: 14px; left: 181px; top: -102px;" />
+        <ui:Button text="SKILLS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="SKILLS" class="button-skills" style="left: 333.5px; width: 85px; height: 45px; font-size: 14px; top: -152px;" />
+        <ui:Button text="MAP" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MAP" class="button-map" style="left: 420.5px; width: 80px; height: 45px; top: -201.8px; font-size: 14px;" />
+        <ui:Button text="GOALS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GOALS" class="button-goals" style="left: 502px; height: 45px; top: -251px; font-size: 14px; width: 70px;" />
+        <ui:Button text="CODEX" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CODEX" class="button-codex" style="font-size: 14px; height: 45px; top: -301px; left: 573.5px; width: 70px;" />
+        <ui:Button text="RESOURCES" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RESOURSES" class="button-resources" style="height: 45px; width: 120px; -unity-font-style: bold; font-size: 14px; left: 645px; top: -350px;" />
+        <ui:Label tabindex="-1" text="    R1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="R1" style="background-color: rgb(217, 217, 217); width: 60px; height: 45px; left: 768px; top: -402px; white-space: normal; text-overflow: ellipsis; font-size: 18px; -unity-text-align: upper-left;" />
     </ui:VisualElement>
 </ui:UXML>
