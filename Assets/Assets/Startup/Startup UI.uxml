@@ -32,7 +32,7 @@
         <ui:Button text="RESOURCES" parse-escape-sequences="true" display-tooltip-when-elided="true" name="RESOURSES" class="button-resources" style="height: 45px; width: 120px; -unity-font-style: bold; font-size: 14px; left: 645px; top: -351px;" />
         <ui:Label tabindex="-1" text="    R1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="R1" style="background-color: rgb(217, 217, 217); width: 60px; height: 45px; left: 768px; top: -402px; white-space: normal; text-overflow: ellipsis; font-size: 18px; -unity-text-align: upper-left;" />
     </ui:VisualElement>
-    <ui:VisualElement name="Storage" style="flex-grow: 1; justify-content: flex-start; display: none;">
+    <ui:VisualElement name="Storage" style="flex-grow: 1; justify-content: flex-start; display: flex;">
         <ui:VisualElement name="NavbarContainer" style="flex-grow: 0; height: 70px; flex-direction: row; background-color: rgb(0, 0, 0);">
             <ui:VisualElement name="Navbar" style="flex-direction: row; height: 100%; background-color: rgba(0, 0, 0, 0); flex-grow: 5; padding-left: 25px;">
                 <ui:Label tabindex="-1" text="L1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="L1" style="background-color: rgb(45, 49, 48); flex-grow: 0; -unity-text-align: middle-center; font-size: 20px; -unity-font-style: normal; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 15px; padding-right: 0; padding-bottom: 7px; padding-left: 0; color: rgb(255, 255, 255); border-left-color: rgb(190, 177, 132); border-right-color: rgb(190, 177, 132); border-top-color: rgb(190, 177, 132); border-bottom-color: rgb(190, 177, 132); border-top-width: 0; border-right-width: 1.5px; border-bottom-width: 2px; border-left-width: 0; width: 70px; height: 70px;" />
@@ -75,7 +75,12 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="Pages" style="flex-grow: 1;">
-            <ui:VisualElement name="Weaponspage" style="flex-grow: 1; background-color: rgb(0, 0, 0);" />
+            <ui:VisualElement name="Weaponspage" style="flex-grow: 1; background-color: rgb(136, 247, 226); display: flex;" />
+            <ui:VisualElement name="Armourpage" style="flex-grow: 1; background-color: rgb(68, 213, 147); display: none;" />
+            <ui:VisualElement name="Skillspage" style="flex-grow: 1; background-color: rgb(245, 236, 102); display: none;" />
+            <ui:VisualElement name="Mappage" style="flex-grow: 1; background-color: rgb(255, 160, 92); display: none;" />
+            <ui:VisualElement name="Goalspage" style="flex-grow: 1; background-color: rgb(253, 89, 111); display: none;" />
+            <ui:VisualElement name="Resourcepage" style="flex-grow: 1; background-color: rgb(130, 128, 128); display: none;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
