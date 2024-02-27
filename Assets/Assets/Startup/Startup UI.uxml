@@ -20,6 +20,15 @@
         <ui:Button text="View Control" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ViewControl" class="button-viewcontrol" />
         <ui:Button text="Change Control" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ChangeControl" class="button-changecontrol" />
         <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Credits" class="button-credits" />
+        <ui:VisualElement style="flex-grow: 1; display: flex;">
+            <ui:VisualElement name="GamePlayPage" style="flex-grow: 1; color: rgb(255, 0, 0);" />
+            <ui:VisualElement name="CameraPage" style="flex-grow: 1; color: rgb(255, 109, 55);" />
+            <ui:VisualElement name="AudioPage" style="flex-grow: 1; color: rgb(252, 255, 38);" />
+            <ui:VisualElement name="AccessibilityPage" style="flex-grow: 1; color: rgb(112, 255, 26);" />
+            <ui:VisualElement name="ViewControlPage" style="flex-grow: 1; color: rgb(3, 40, 251);" />
+            <ui:VisualElement name="ChangeControlPage" style="flex-grow: 1; color: rgb(69, 23, 205);" />
+            <ui:VisualElement name="CreditsPage" style="flex-grow: 1; color: rgb(204, 10, 236);" />
+        </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(0, 0, 0); width: 836px; font-size: 16px; -unity-font-style: bold; -unity-text-align: upper-left; position: relative; display: none;">
         <ui:Label tabindex="-1" text="    L1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="L1" style="background-color: rgb(217, 217, 217); width: 60px; height: 45px; top: -2px; text-overflow: ellipsis; -unity-text-align: upper-left; left: 0; font-size: 18px; margin-left: 2px; padding-left: -2px; padding-right: 4px;" />
