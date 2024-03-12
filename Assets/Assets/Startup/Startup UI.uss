@@ -140,17 +140,58 @@
 }
 
 .button-resources {
-    width: 66px;
-    height: 30px;
-    border-bottom-right-radius: 6px;
-    border-bottom-left-radius: 6px;
-    font-size: 10px;
-    top: -246px;
-    left: 426px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    bottom: 0%;
+    background-color: rgba(253, 253, 253, 0);
 }
 
 .button-resources:active {
+    
+     background-color: rgba(101, 101, 101, 0.99);
 }
 
 .button-resources:hover {
+     scale: 1.1 1.1;
+}
+
+.unity-text-element {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.unity-label {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.unity-button {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    width: 16.66%;
 }
