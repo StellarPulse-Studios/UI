@@ -80,7 +80,7 @@
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="StorageMain" style="flex-grow: 1; display: flex;">
-        <ui:VisualElement focusable="false" name="Container" style="flex-grow: 0; background-color: rgb(0, 0, 0); height: 10%; width: 80%; flex-direction: row; display: flex;">
+        <ui:VisualElement focusable="false" name="Container" style="flex-grow: 0; background-color: rgb(0, 0, 0); height: 10%; width: 100%; flex-direction: row; display: flex;">
             <ui:VisualElement name="Weaponsbar" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: flex;" />
             <ui:VisualElement name="Armourbar" style="flex-grow: 1;" />
             <ui:VisualElement name="Skillsbar" style="flex-grow: 1;" />
@@ -95,6 +95,8 @@
                 <ui:Button text="Goals" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Goalsbtn" class="button-resources" style="background-image: none; -unity-background-scale-mode: stretch-to-fill; border-left-color: rgb(179, 0, 255); border-right-color: rgb(179, 0, 255); border-top-color: rgb(179, 0, 255); border-bottom-color: rgb(179, 0, 255); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; background-color: rgba(52, 152, 219, 0); font-size: 20px; -unity-font-style: bold; color: rgb(255, 255, 255);" />
                 <ui:Button text="Resouce" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Resourcebtn" class="button-resources" style="background-image: none; -unity-background-scale-mode: stretch-to-fill; border-left-color: rgb(179, 0, 255); border-right-color: rgb(179, 0, 255); border-top-color: rgb(179, 0, 255); border-bottom-color: rgb(179, 0, 255); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; background-color: rgba(52, 152, 219, 0); font-size: 20px; -unity-font-style: bold; color: rgb(255, 255, 255);" />
             </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement style="flex-grow: 1;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
