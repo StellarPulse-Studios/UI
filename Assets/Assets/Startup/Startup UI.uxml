@@ -150,10 +150,10 @@
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="Skills" style="flex-grow: 1;">
-        <ui:VisualElement style="flex-grow: 1; position: absolute; top: 120px; width: 4%; height: 80px; left: 50px; background-color: rgb(0, 0, 0); rotate: 45deg;" />
-        <ui:VisualElement style="flex-grow: 1; rotate: 45deg; background-color: rgb(0, 0, 0); width: 4%; height: 80px; position: absolute; top: 120px; left: 165px;" />
-        <ui:VisualElement style="flex-grow: 1; position: absolute; top: 120px; width: 4%; height: 80px; background-color: rgb(0, 0, 0); rotate: 45deg; left: 280px;" />
-        <ui:VisualElement style="flex-grow: 1; top: 120px; width: 4%; position: absolute; background-color: rgb(0, 0, 0); rotate: 45deg; left: 395px; bottom: 860px; height: 80px;" />
+        <ui:VisualElement style="flex-grow: 1; position: absolute; top: 120px; height: 70px; left: 50px; background-color: rgb(0, 0, 0); rotate: 45deg; right: 1867px; width: 3.5%;" />
+        <ui:VisualElement style="flex-grow: 1; rotate: 45deg; background-color: rgb(0, 0, 0); width: 3.5%; height: 70px; position: absolute; top: 120px; left: 165px;" />
+        <ui:VisualElement style="flex-grow: 1; position: absolute; top: 120px; width: 3.5%; height: 70px; background-color: rgb(0, 0, 0); rotate: 45deg; left: 280px;" />
+        <ui:VisualElement style="flex-grow: 1; top: 120px; width: 3.5%; position: absolute; background-color: rgb(0, 0, 0); rotate: 45deg; left: 395px; bottom: 860px; height: 70px;" />
         <ui:VisualElement name="RangedCombat" style="width: 25%; position: absolute; height: 70%; left: 320px; top: 240px; background-color: rgba(88, 80, 80, 0.22);">
             <ui:VisualElement style="flex-grow: 1; height: 50px; position: absolute; width: 100%; background-color: rgba(249, 249, 249, 0.23);">
                 <ui:Label tabindex="-1" text="Ranged Combat" parse-escape-sequences="true" display-tooltip-when-elided="true" style="position: absolute; font-size: 35px; height: 100%; width: 100%; -unity-text-align: upper-center;" />
