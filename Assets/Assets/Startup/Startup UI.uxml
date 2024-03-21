@@ -197,18 +197,92 @@
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="Armour" style="flex-grow: 1;">
-        <ui:VisualElement style="flex-grow: 1; width: 28%; height: 70%; position: absolute; top: 201px; background-color: rgba(0, 0, 0, 0.42);" />
-        <ui:VisualElement style="flex-grow: 1; width: 28%; height: 73%; position: absolute; top: 170px; background-color: rgba(0, 0, 0, 0.42); left: 575px;" />
+        <ui:VisualElement style="flex-grow: 1; width: 28%; height: 60%; position: absolute; top: 201px; background-color: rgba(0, 0, 0, 0.42); left: 20px;">
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 50px; position: absolute; background-color: rgba(43, 199, 55, 0.84);">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%; font-size: 30px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; top: 301px; background-color: rgba(213, 59, 59, 0.89);">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 100%; height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; top: 342px; background-color: rgba(202, 213, 59, 0.89);">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 100%; height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; top: 384px; background-color: rgba(89, 213, 59, 0.89);">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 100%; height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; top: 425px; background-color: rgba(59, 213, 181, 0.89);">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%; width: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; top: 467px; background-color: rgba(213, 59, 144, 0.89);">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 100%; height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; top: 508px; background-color: rgba(59, 126, 213, 0.89);">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 100%; height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; top: 550px; background-color: rgba(59, 76, 213, 0.89);">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 100%; height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; top: 592px; background-color: rgba(59, 76, 213, 0.89);">
+                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" style="width: 100%; height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 70px; position: absolute; background-color: rgba(199, 196, 43, 0.84); top: 230px;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%; font-size: 35px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 12%; height: 65px; position: absolute; background-color: rgb(217, 40, 40); rotate: 45deg; left: 250px; top: 90px;" />
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 50px; position: absolute; background-color: rgba(43, 199, 55, 0.84); top: 180px;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 35px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 28%; height: 73%; position: absolute; top: 170px; background-color: rgba(0, 0, 0, 0.42); left: 575px;">
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; background-color: rgba(49, 39, 236, 0.9);">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 40px; position: absolute; background-color: rgba(236, 62, 39, 0.9); bottom: 0;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 60px; position: absolute; background-color: rgba(228, 236, 39, 0.9); top: 42px;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 100%; height: 40%; position: absolute; background-color: rgba(39, 236, 61, 0.9); top: 102px;">
+                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%;" />
+                <ui:VisualElement style="flex-grow: 1; width: 15%; height: 26%; position: absolute; rotate: 45deg; background-color: rgba(0, 0, 0, 0.86); left: 30px; top: 90px;" />
+                <ui:VisualElement style="flex-grow: 1; width: 100%; height: 100px; position: absolute; bottom: 0; background-color: rgba(176, 93, 93, 0.77);">
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%;" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; width: 65%; height: 30px; position: absolute; right: 0; background-color: rgba(217, 52, 52, 0.9); bottom: 200px;">
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; width: 65%; height: 30px; position: absolute; right: 0; background-color: rgba(52, 59, 217, 0.9); bottom: 162px;">
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 1; width: 65%; height: 30px; position: absolute; right: 0; background-color: rgba(186, 52, 217, 0.9); bottom: 120px;">
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 100%; height: 42%; position: absolute; background-color: rgba(39, 236, 234, 0.9); top: 420px;">
+                <ui:VisualElement style="flex-grow: 1; width: 15%; height: 26%; position: absolute; background-color: rgb(0, 0, 0); rotate: 45deg; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; left: 20px; top: 20px;" />
+                <ui:VisualElement style="flex-grow: 1; width: 15%; height: 26%; position: absolute; background-color: rgb(0, 0, 0); rotate: 45deg; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; left: 20px; top: 125px;" />
+                <ui:VisualElement style="flex-grow: 1; width: 15%; height: 26%; position: absolute; background-color: rgb(0, 0, 0); rotate: 45deg; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; left: 20px; top: 230px; right: auto; bottom: auto;" />
+                <ui:VisualElement style="flex-grow: 1; width: 65%; height: 40px; position: absolute; right: 0; top: 50px;">
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgba(100, 199, 76, 0.81); height: 100%;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgba(191, 199, 76, 0.96); height: 100%; top: 65px;" />
+                    <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="background-color: rgba(76, 80, 199, 0.93); height: 100%; top: 130px; color: rgba(159, 47, 178, 0.9);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement style="flex-grow: 1; width: 35%; height: 50%; position: absolute; top: 120px; background-color: rgba(0, 0, 0, 0.42); left: 1200px;">
             <ui:VisualElement style="flex-grow: 1; height: 8%; position: absolute; width: 100%; background-color: rgb(255, 255, 255); font-size: 25px;">
                 <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 30px; height: 100%;" />
             </ui:VisualElement>
-            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: auto; top: 70px; background-color: rgb(238, 25, 25);" />
-            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: auto; top: 150px; background-color: rgb(231, 238, 25);" />
-            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: auto; top: 230px; background-color: rgb(25, 238, 34);" />
-            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: auto; top: 310px; background-color: rgb(25, 238, 210);" />
-            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: auto; top: 390px; background-color: rgb(25, 59, 238);" />
-            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: auto; top: 470px; background-color: rgb(201, 25, 238);" />
+            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: 10px; top: 70px; background-color: rgb(238, 25, 25);" />
+            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: 10px; top: 150px; background-color: rgb(231, 238, 25);" />
+            <ui:VisualElement style="flex-grow: 1; width: 15%; position: absolute; left: 10px; top: 230px; background-color: rgb(25, 238, 34); bottom: 250px;" />
+            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: 10px; top: 310px; background-color: rgb(25, 238, 210);" />
+            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: 10px; top: 390px; background-color: rgb(25, 59, 238);" />
+            <ui:VisualElement style="flex-grow: 1; width: 15%; height: 60px; position: absolute; left: 10px; top: 470px; background-color: rgb(201, 25, 238);" />
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 28%; height: 95px; position: absolute; background-color: rgba(0, 0, 0, 0.52); left: 20px; top: 870px;">
+            <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" style="height: 100%; width: 100%; font-size: 50px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
