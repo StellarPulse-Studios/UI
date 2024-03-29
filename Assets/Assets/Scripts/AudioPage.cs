@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AudioPage : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public UIDocument uidoc;
+    public Button backButton;
+
+    VisualElement Au;
+    VisualElement SettingsPages;
+
     void Start()
     {
-        
-    }
+        VisualElement root = uidoc.rootVisualElement;
+        Au = root.Q<VisualElement>("AudioPage");
+        SettingsPages = root.Q<VisualElement>("SettingsPages");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        backButton = Au.Q<Button>("BackbtnT");
+
+        backButton.clicked += () =>
+        {
+            SettingsPages.style.display = DisplayStyle.Flex;
+            Au.style.display = DisplayStyle.None;
+        };
     }
 }
+

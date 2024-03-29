@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AccessibilityPage : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public UIDocument uidoc;
+    public Button backButton;
+
+    VisualElement Assi;
+    VisualElement SettingsPages;
+
     void Start()
     {
-        
-    }
+        VisualElement root = uidoc.rootVisualElement;
+        Assi = root.Q<VisualElement>("AccessibilityPage");
+        SettingsPages = root.Q<VisualElement>("SettingsPages");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        backButton = Assi.Q<Button>("BackbtnFour");
+
+        backButton.clicked += () =>
+        {
+            SettingsPages.style.display = DisplayStyle.Flex;
+            Assi.style.display = DisplayStyle.None;
+        };
     }
 }

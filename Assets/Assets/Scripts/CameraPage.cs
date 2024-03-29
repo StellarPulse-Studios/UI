@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CameraPage : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public UIDocument uidoc;
+    public Button backButton;
+
+    VisualElement Camera;
+    VisualElement SettingsPages;
+
     void Start()
     {
-        
-    }
+        VisualElement root = uidoc.rootVisualElement;
+        Camera = root.Q<VisualElement>("CameraPage");
+        SettingsPages = root.Q<VisualElement>("SettingsPages");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        backButton = Camera.Q<Button>("BackbtnS");
+
+        backButton.clicked += () =>
+        {
+            SettingsPages.style.display = DisplayStyle.Flex;
+            Camera.style.display = DisplayStyle.None;
+        };
     }
 }
+

@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ChangeContolPage : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public UIDocument uidoc;
+    public Button backButton;
+
+    VisualElement C;
+    VisualElement SettingsPages;
+
     void Start()
     {
-        
-    }
+        VisualElement root = uidoc.rootVisualElement;
+        C = root.Q<VisualElement>("ChangeControlPage");
+        SettingsPages = root.Q<VisualElement>("SettingsPages");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        backButton = C.Q<Button>("BackbtnSisth");
+
+        backButton.clicked += () =>
+        {
+            SettingsPages.style.display = DisplayStyle.Flex;
+            C.style.display = DisplayStyle.None;
+        };
     }
 }

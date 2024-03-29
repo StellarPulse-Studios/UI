@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ViewContolPage : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public UIDocument uidoc;
+    public Button backButton;
+
+    VisualElement V;
+    VisualElement SettingsPages;
+
     void Start()
     {
-        
-    }
+        VisualElement root = uidoc.rootVisualElement;
+        V = root.Q<VisualElement>("ViewControlPage");
+        SettingsPages = root.Q<VisualElement>("SettingsPages");
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        backButton = V.Q<Button>("BackbtnFifth");
+
+        backButton.clicked += () =>
+        {
+            SettingsPages.style.display = DisplayStyle.Flex;
+            V.style.display = DisplayStyle.None;
+        };
     }
 }
+
