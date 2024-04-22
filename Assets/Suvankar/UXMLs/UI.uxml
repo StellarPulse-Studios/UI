@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Suvankar/USSs/Styles.uss?fileID=7433441132597879392&amp;guid=366e1635a10a2b44c9d5960a98a88fdb&amp;type=3#Styles" />
+    <ui:VisualElement name="MainMenu" style="flex-grow: 1; align-items: center;">
+        <ui:VisualElement name="Background" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&apos;project://database/Assets/Suvankar/Render%20Textures/Main%20Menu%20Background%20RT.renderTexture?fileID=8400000&amp;guid=1de7caaa0aa5f244b947cc23914333e9&amp;type=2#Main Menu Background RT&apos;); -unity-background-scale-mode: scale-and-crop;" />
+        <ui:VisualElement name="Header" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%206.png?fileID=2800000&amp;guid=9825d685236ca304c98f058f8a42243d&amp;type=3#Group 6&apos;); -unity-background-scale-mode: scale-to-fit; height: 20%; margin-top: 50px; margin-bottom: 50px; width: 100%;" />
+        <ui:VisualElement name="ButtonsHolder" style="margin-top: 100px; align-items: center;">
+            <ui:VisualElement name="Continue" class="menuButton">
+                <ui:VisualElement name="LeftArrow" picking-mode="Ignore" class="arrow leftArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;);" />
+                <ui:Label tabindex="-1" text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="label" />
+                <ui:VisualElement name="RightArrow" picking-mode="Ignore" class="arrow rightArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="NewGame" class="menuButton">
+                <ui:VisualElement name="LeftArrow" picking-mode="Ignore" class="arrow leftArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;);" />
+                <ui:Label tabindex="-1" text="New Game" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="label" />
+                <ui:VisualElement name="RightArrow" picking-mode="Ignore" class="arrow rightArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Settings" class="menuButton">
+                <ui:VisualElement name="LeftArrow" picking-mode="Ignore" class="arrow leftArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;);" />
+                <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="label" />
+                <ui:VisualElement name="RightArrow" picking-mode="Ignore" class="arrow rightArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="QuitToWindows" class="menuButton">
+                <ui:VisualElement name="LeftArrow" picking-mode="Ignore" class="arrow leftArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;);" />
+                <ui:Label tabindex="-1" text="Quit To Windows" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="label" />
+                <ui:VisualElement name="RightArrow" picking-mode="Ignore" class="arrow rightArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
