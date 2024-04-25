@@ -304,6 +304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UIDocs: {fileID: 570718423}
+  m_TotalTime: 0.5
+  m_IsAnimationCompleted: 0
 --- !u!1 &1391114464
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,3 +1,23 @@
+.hide {
+    display: none;
+}
+
+.absoluteFullscreen {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-1 {
+    opacity: 1;
+}
+
 .menuButton {
     justify-content: center;
 }
@@ -14,17 +34,17 @@
 .arrow {
     opacity: 0;
     position: absolute;
-    width: 120px;
-    height: 30px;
+    width: 110px;
+    height: 20px;
     transition-duration: 0.3s;
 }
 
 .leftArrow {
-    left: -120px;
+    left: -110px;
 }
 
 .rightArrow {
-    right: -120px;
+    right: -110px;
 }
 
 .menuButton.active .arrow {
@@ -33,4 +53,8 @@
 
 .menuButton.active .label {
     color: rgb(150, 255, 240);
+}
+
+.zoomInBackground {
+    scale: 1.2 1.2;
 }

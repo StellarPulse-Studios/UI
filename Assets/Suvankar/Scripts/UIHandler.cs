@@ -8,23 +8,31 @@ namespace Suvankar
     public class UIHandler : MonoBehaviour
     {
         [SerializeField] private UIDocument m_UIDocs;
+        [SerializeField] private float m_TotalTime = 1.0f;
+        [SerializeField] private bool m_IsAnimationCompleted;
 
         private int m_SelectedButtonIndex;
+        private VisualElement m_ButtonsHolder;
         private VisualElement[] m_Buttons;
-        private Vector2 m_PrevMousePosiion;
         private VisualElement m_HoveredButton;
+        private Vector2 m_PrevMousePosiion;
+
+        private float m_ElapsedTime;
+
+        private const string c_ActiveClassName = "active";
+        private const string c_HideClassName = "hide";
 
         private void Awake()
         {
             VisualElement root = m_UIDocs.rootVisualElement;
-
-            VisualElement buttonsHolder = root.Q("ButtonsHolder");
-            m_Buttons = new List<VisualElement>(buttonsHolder.Children()).ToArray();
+            m_ButtonsHolder = root.Q("ButtonsHolder");
         }
 
         private void OnEnable()
         {
-            foreach (var button in m_Buttons)
+            m_ButtonsHolder.RegisterCallback<GeometryChangedEvent>(OnChildrenCountChanged);
+
+            foreach (var button in m_ButtonsHolder.Children())
             {
                 button.RegisterCallback<MouseOverEvent>(OnMouseOverButton);
                 button.RegisterCallback<MouseOutEvent>(OnMouseOutButton);
@@ -34,64 +42,155 @@ namespace Suvankar
 
         private void Start()
         {
-            m_SelectedButtonIndex = 0;
-            m_Buttons[m_SelectedButtonIndex].ToggleInClassList("active");
             m_PrevMousePosiion = Input.mousePosition;
+            m_SelectedButtonIndex = 0;
+            InitButtons();
         }
 
         private void Update()
         {
-            if ((Vector2)Input.mousePosition != m_PrevMousePosiion)
+            HandleMouseInteraction();
+            HandleKeyboardInteraction();
+
+            if (Input.GetKey(KeyCode.Space) && !m_IsAnimationCompleted)
             {
-                if (!UnityEngine.Cursor.visible && m_HoveredButton != null)
+                m_ElapsedTime += Time.deltaTime;
+                float t = Mathf.Clamp01(m_ElapsedTime / m_TotalTime);
+                float position = Mathf.LerpUnclamped(-480.0f, -780.0f, t);
+
+                var root = m_UIDocs.rootVisualElement;
+                var titleScreen = root.Q("TitleScreen");
+                titleScreen.Q("LeftArrow").style.left = new StyleLength(position);
+                titleScreen.Q("RightArrow").style.right = new StyleLength(position);
+
+                if (m_ElapsedTime >= m_TotalTime)
                 {
-                    for (int i = 0; i < m_Buttons.Length; i++)
-                    {
-                        if (m_Buttons[i] != m_HoveredButton)
-                            continue;
-
-                        m_Buttons[m_SelectedButtonIndex].ToggleInClassList("active");
-                        m_SelectedButtonIndex = i;
-                        m_Buttons[m_SelectedButtonIndex].ToggleInClassList("active");
-                        break;
-                    }
+                    m_IsAnimationCompleted = true;
+                    OnAnimationCompleted();
                 }
-
-                m_PrevMousePosiion = Input.mousePosition;
-                UnityEngine.Cursor.visible = true;
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyUp(KeyCode.Space) && !m_IsAnimationCompleted)
             {
-                UnityEngine.Cursor.visible = false;
+                m_ElapsedTime = 0.0f;
 
-                int prevIndex = m_SelectedButtonIndex;
-                m_SelectedButtonIndex = Mod(m_SelectedButtonIndex - 1, m_Buttons.Length);
+                var root = m_UIDocs.rootVisualElement;
+                var titleScreen = root.Q("TitleScreen");
+                titleScreen.Q("LeftArrow").style.left = new StyleLength(-480.0f);
+                titleScreen.Q("RightArrow").style.right = new StyleLength(-480.0f);
+            }
+        }
 
-                m_Buttons[prevIndex].ToggleInClassList("active");
-                m_Buttons[m_SelectedButtonIndex].ToggleInClassList("active");
+        private void OnAnimationCompleted()
+        {
+            var root = m_UIDocs.rootVisualElement;
+            var background = root.Q("Background");
+            var titleScreen = root.Q("TitleScreen");
+            var mainMenuScreen = root.Q("MainMenuScreen");
+
+            titleScreen.RegisterCallback<TransitionEndEvent>(e =>
+            {
+                titleScreen.AddToClassList("hide");
+            });
+
+            if (!background.ClassListContains("zoomInBackground"))
+            {
+                background.AddToClassList("zoomInBackground");
             }
 
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (!titleScreen.ClassListContains("opacity-0"))
             {
-                UnityEngine.Cursor.visible = false;
+                titleScreen.AddToClassList("opacity-0");
+            }
 
-                int prevIndex = m_SelectedButtonIndex;
-                m_SelectedButtonIndex = Mod(m_SelectedButtonIndex + 1, m_Buttons.Length);
-
-                m_Buttons[prevIndex].ToggleInClassList("active");
-                m_Buttons[m_SelectedButtonIndex].ToggleInClassList("active");
+            if (mainMenuScreen.ClassListContains("hide"))
+            {
+                mainMenuScreen.RemoveFromClassList("opacity-0");
+                mainMenuScreen.RemoveFromClassList("hide");
             }
         }
 
         private void OnDisable()
         {
-            foreach (var button in m_Buttons)
+            m_ButtonsHolder.UnregisterCallback<GeometryChangedEvent>(OnChildrenCountChanged);
+
+            foreach (var button in m_ButtonsHolder.Children())
             {
                 button.UnregisterCallback<MouseOverEvent>(OnMouseOverButton);
                 button.UnregisterCallback<MouseOutEvent>(OnMouseOutButton);
                 button.UnregisterCallback<ClickEvent>(OnButtonClicked);
             }
+        }
+
+        private void InitButtons()
+        {
+            VisualElement selectedButton = (m_Buttons == null || m_Buttons.Length == 0) ? null : m_Buttons[m_SelectedButtonIndex];
+            List<VisualElement> buttons = new List<VisualElement>();
+
+            foreach (var button in m_ButtonsHolder.Children())
+            {
+                button.RemoveFromClassList(c_ActiveClassName);
+
+                if (button.ClassListContains(c_HideClassName))
+                    continue;
+
+                if (button == selectedButton)
+                    m_SelectedButtonIndex = buttons.Count;
+
+                buttons.Add(button);
+            }
+
+            m_Buttons = buttons.ToArray();
+            m_SelectedButtonIndex = Mathf.Clamp(m_SelectedButtonIndex, 0, m_Buttons.Length - 1);
+            m_Buttons[m_SelectedButtonIndex].ToggleInClassList(c_ActiveClassName);
+        }
+
+        private void HandleMouseInteraction()
+        {
+            if ((Vector2)Input.mousePosition == m_PrevMousePosiion)
+                return;
+
+            m_PrevMousePosiion = Input.mousePosition;
+            bool isCursorVisiblePreviously = UnityEngine.Cursor.visible;
+            UnityEngine.Cursor.visible = true;
+
+            if (isCursorVisiblePreviously || m_HoveredButton == null)
+                return;
+
+            for (int i = 0; i < m_Buttons.Length; i++)
+            {
+                if (m_Buttons[i] != m_HoveredButton)
+                    continue;
+
+                m_Buttons[m_SelectedButtonIndex].ToggleInClassList(c_ActiveClassName);
+                m_SelectedButtonIndex = i;
+                m_Buttons[m_SelectedButtonIndex].ToggleInClassList(c_ActiveClassName);
+                break;
+            }
+        }
+
+        private void HandleKeyboardInteraction()
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                SelectButton(m_SelectedButtonIndex - 1);
+            }
+
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                SelectButton(m_SelectedButtonIndex + 1);
+            }
+        }
+
+        private void SelectButton(int newSelectedButtonIndex)
+        {
+            UnityEngine.Cursor.visible = false;
+
+            int prevIndex = m_SelectedButtonIndex;
+            m_SelectedButtonIndex = Mod(newSelectedButtonIndex, m_Buttons.Length);
+
+            m_Buttons[prevIndex].ToggleInClassList(c_ActiveClassName);
+            m_Buttons[m_SelectedButtonIndex].ToggleInClassList(c_ActiveClassName);
         }
 
         private void OnMouseOverButton(MouseOverEvent mouseOverEvent)
@@ -105,9 +204,9 @@ namespace Suvankar
 
                 m_HoveredButton = button;
 
-                m_Buttons[m_SelectedButtonIndex].ToggleInClassList("active");
+                m_Buttons[m_SelectedButtonIndex].ToggleInClassList(c_ActiveClassName);
                 m_SelectedButtonIndex = i;
-                m_Buttons[m_SelectedButtonIndex].ToggleInClassList("active");
+                m_Buttons[m_SelectedButtonIndex].ToggleInClassList(c_ActiveClassName);
                 break;
             }
         }
@@ -117,6 +216,11 @@ namespace Suvankar
             m_HoveredButton = null;
         }
 
+        private void OnChildrenCountChanged(GeometryChangedEvent geometryChangedEvent)
+        {
+            InitButtons();
+        }
+
         private void OnButtonClicked(ClickEvent clickEvent)
         {
             foreach (var button in m_Buttons)
@@ -124,7 +228,7 @@ namespace Suvankar
                 if (clickEvent.currentTarget != button)
                     continue;
 
-                print($"You have clicked on {button.name}");
+                OnClicked(button);
                 break;
             }
         }
@@ -135,5 +239,10 @@ namespace Suvankar
                 divident = divisor + divident;
             return divident % divisor;
         }
+
+        private void OnClicked(VisualElement button)
+        {
+
+        }    
     }
 }
