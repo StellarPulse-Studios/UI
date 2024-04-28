@@ -1,9 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?>
-<engine:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:engine="UnityEngine.UIElements"
-    xmlns:editor="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
->
-    
-</engine:UXML>
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Menus" style="flex-grow: 1; display: none;">
+        <ui:VisualElement name="Background" class="absoluteFullscreen" style="background-image: url(&apos;project://database/Assets/Suvankar/Render%20Textures/Main%20Menu%20Background%20RT.renderTexture?fileID=8400000&amp;guid=1de7caaa0aa5f244b947cc23914333e9&amp;type=2#Main Menu Background RT&apos;); -unity-background-scale-mode: scale-and-crop; transition-property: scale; transition-duration: 0.75s; transition-timing-function: ease-out-cubic;" />
+        <ui:VisualElement name="TitleScreen" class="absoluteFullscreen" style="align-items: center; justify-content: space-between; transition-duration: 0.75s; transition-property: opacity; transition-timing-function: ease-out-cubic;">
+            <ui:VisualElement name="Header" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%206.png?fileID=2800000&amp;guid=9825d685236ca304c98f058f8a42243d&amp;type=3#Group 6&apos;); width: 100%; height: 45%; -unity-background-scale-mode: scale-to-fit; margin-top: 120px;" />
+            <ui:VisualElement name="KeyCommandLabel" style="margin-bottom: 80px; justify-content: center;">
+                <ui:VisualElement name="LeftArrow" picking-mode="Ignore" style="width: 480px; position: absolute; height: 20px; left: -480px; background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%208.png?fileID=2800000&amp;guid=5d3eba1b967453c46b6787ba24119cb1&amp;type=3#Group 8&apos;);" />
+                <ui:Label tabindex="-1" text="SPACE TO BEGIN" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-top: 0; margin-right: 50px; margin-bottom: 0; margin-left: 50px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; -unity-font-definition: url(&apos;project://database/Assets/Assets/Fonts/Alice/Alice-Regular%20SDF.asset?fileID=11400000&amp;guid=8fbb3ec60b297194ba822cdda67fb259&amp;type=2#Alice-Regular SDF&apos;); font-size: 32px; color: rgb(255, 255, 255); -unity-text-align: middle-center;" />
+                <ui:VisualElement name="RightArrow" picking-mode="Ignore" style="position: absolute; right: -480px; width: 480px; height: 20px; background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%207.png?fileID=2800000&amp;guid=28a0ee32d6a5d11469605f5b43126537&amp;type=3#Group 7&apos;);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="MainMenuScreen" class="absoluteFullscreen opacity-0 hide" style="align-items: center; transition-duration: 0.75s; transition-timing-function: ease-in-out-cubic; transition-property: opacity;">
+            <ui:VisualElement name="Header" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%206.png?fileID=2800000&amp;guid=9825d685236ca304c98f058f8a42243d&amp;type=3#Group 6&apos;); -unity-background-scale-mode: scale-to-fit; height: 20%; margin-top: 50px; margin-bottom: 50px; width: 100%;" />
+            <ui:VisualElement name="ButtonsHolder" style="margin-top: 100px; align-items: center;">
+                <ui:VisualElement name="Continue" class="menuButton hide">
+                    <ui:VisualElement name="LeftArrow" picking-mode="Ignore" class="arrow leftArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;);" />
+                    <ui:Label tabindex="-1" text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="label" style="-unity-font-definition: url(&apos;project://database/Assets/Assets/Fonts/Alice/Alice-Regular%20SDF.asset?fileID=11400000&amp;guid=8fbb3ec60b297194ba822cdda67fb259&amp;type=2#Alice-Regular SDF&apos;);" />
+                    <ui:VisualElement name="RightArrow" picking-mode="Ignore" class="arrow rightArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="NewGame" class="menuButton">
+                    <ui:VisualElement name="LeftArrow" picking-mode="Ignore" class="arrow leftArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;);" />
+                    <ui:Label tabindex="-1" text="New Game" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="label" style="-unity-font-definition: url(&apos;project://database/Assets/Assets/Fonts/Alice/Alice-Regular%20SDF.asset?fileID=11400000&amp;guid=8fbb3ec60b297194ba822cdda67fb259&amp;type=2#Alice-Regular SDF&apos;);" />
+                    <ui:VisualElement name="RightArrow" picking-mode="Ignore" class="arrow rightArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="Settings" class="menuButton">
+                    <ui:VisualElement name="LeftArrow" picking-mode="Ignore" class="arrow leftArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;);" />
+                    <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="label" style="-unity-font-definition: url(&apos;project://database/Assets/Assets/Fonts/Alice/Alice-Regular%20SDF.asset?fileID=11400000&amp;guid=8fbb3ec60b297194ba822cdda67fb259&amp;type=2#Alice-Regular SDF&apos;);" />
+                    <ui:VisualElement name="RightArrow" picking-mode="Ignore" class="arrow rightArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="QuitToWindows" class="menuButton">
+                    <ui:VisualElement name="LeftArrow" picking-mode="Ignore" class="arrow leftArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;);" />
+                    <ui:Label tabindex="-1" text="Quit To Windows" parse-escape-sequences="true" display-tooltip-when-elided="true" picking-mode="Ignore" class="label" style="-unity-font-definition: url(&apos;project://database/Assets/Assets/Fonts/Alice/Alice-Regular%20SDF.asset?fileID=11400000&amp;guid=8fbb3ec60b297194ba822cdda67fb259&amp;type=2#Alice-Regular SDF&apos;);" />
+                    <ui:VisualElement name="RightArrow" picking-mode="Ignore" class="arrow rightArrow" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="MainMenu" style="flex-grow: 1; display: flex;">
+        <ui:VisualElement name="Background" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&apos;project://database/Assets/Assets/Texture/Screen%20Texture.renderTexture?fileID=8400000&amp;guid=e8f5b54efae9ca94e9204bbd3c00b6cb&amp;type=2#Screen Texture&apos;); -unity-background-scale-mode: scale-and-crop;" />
+        <ui:VisualElement name="Header" style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%206.png?fileID=2800000&amp;guid=9825d685236ca304c98f058f8a42243d&amp;type=3#Group 6&apos;); -unity-background-scale-mode: scale-to-fit; height: 20%; margin-top: 50px; margin-bottom: 50px;" />
+        <ui:VisualElement name="ButtonsHolder" style="flex-grow: 1; margin-top: 100px;">
+            <ui:VisualElement name="Continue" style="width: 100%; height: 100px; flex-direction: row;">
+                <ui:VisualElement name="LeftArrow" style="flex-grow: 1; align-items: flex-end; justify-content: center;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;); -unity-background-scale-mode: scale-to-fit; width: 160px; height: 40px; position: absolute; display: none;" />
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 40px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 30px; margin-bottom: 0; margin-left: 30px;" />
+                <ui:VisualElement name="RightArrow" style="flex-grow: 1; align-items: flex-start; justify-content: center;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;); -unity-background-scale-mode: scale-to-fit; width: 160px; height: 40px; position: absolute; display: none;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="NewGame" style="width: 100%; height: 100px; flex-direction: row;">
+                <ui:VisualElement name="LeftArrow" style="flex-grow: 1; align-items: flex-end; justify-content: center;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;); -unity-background-scale-mode: scale-to-fit; width: 160px; height: 40px; position: absolute; display: none;" />
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="New Game" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 40px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 30px; margin-bottom: 0; margin-left: 30px;" />
+                <ui:VisualElement name="RightArrow" style="flex-grow: 1; align-items: flex-start; justify-content: center;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;); -unity-background-scale-mode: scale-to-fit; width: 160px; height: 40px; position: absolute; display: none;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Settings" style="width: 100%; height: 100px; flex-direction: row;">
+                <ui:VisualElement name="LeftArrow" style="flex-grow: 1; align-items: flex-end; justify-content: center;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;); -unity-background-scale-mode: scale-to-fit; width: 160px; height: 40px; position: absolute; display: none;" />
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="Settings" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 40px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 30px; margin-bottom: 0; margin-left: 30px;" />
+                <ui:VisualElement name="RightArrow" style="flex-grow: 1; align-items: flex-start; justify-content: center;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;); -unity-background-scale-mode: scale-to-fit; width: 160px; height: 40px; position: absolute; display: none;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="QuitToWindows" style="width: 100%; height: 100px; flex-direction: row;">
+                <ui:VisualElement name="LeftArrow" style="flex-grow: 1; align-items: flex-end; justify-content: center;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%201.png?fileID=2800000&amp;guid=c28237dcab280ce43a25a5ef87351b2a&amp;type=3#Group 1&apos;); -unity-background-scale-mode: scale-to-fit; width: 160px; height: 40px; position: absolute; display: none;" />
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="Quit To Windows" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: middle-center; font-size: 40px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 30px; margin-bottom: 0; margin-left: 30px;" />
+                <ui:VisualElement name="RightArrow" style="flex-grow: 1; align-items: flex-start; justify-content: center;">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Assets/AssetsFromFigma/Group%202.png?fileID=2800000&amp;guid=252952b8279bb7340ad1af6a770ba1c7&amp;type=3#Group 2&apos;); -unity-background-scale-mode: scale-to-fit; width: 160px; height: 40px; position: absolute; display: none;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Loading" style="flex-grow: 1; background-color: rgb(0, 0, 0); align-items: flex-end; justify-content: flex-end; display: none; background-image: url(&apos;project://database/Assets/Assets/Background/Title.png?fileID=2800000&amp;guid=e41797df46bf91f45a0ae2ea7b0d6659&amp;type=3#Title&apos;); -unity-background-scale-mode: scale-and-crop;">
+        <ui:VisualElement name="ImageLoad" style="flex-grow: 0; background-image: url(&apos;project://database/Assets/Assets/Rendertexture/LoadingRt.asset?fileID=8600000&amp;guid=994d52c53784dc4459517d79870cfdbf&amp;type=2#LoadingRt&apos;); -unity-background-scale-mode: scale-to-fit; width: 75px; height: 75px; align-items: stretch; margin-bottom: 20px; margin-right: 20px; display: flex;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="PauseMenu" style="flex-grow: 1; display: none;" />
+</ui:UXML>
