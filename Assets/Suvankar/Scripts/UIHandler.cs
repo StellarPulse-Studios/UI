@@ -52,7 +52,15 @@ namespace Suvankar
             HandleMouseInteraction();
             HandleKeyboardInteraction();
 
-            if (Input.GetKey(KeyCode.Space) && !m_IsAnimationCompleted)
+            HandlePressAnyButton();
+        }
+
+        private void HandlePressAnyButton()
+        {
+            if (m_IsAnimationCompleted)
+                return;
+
+            if (Input.GetKey(KeyCode.Space))
             {
                 m_ElapsedTime += Time.deltaTime;
                 float t = Mathf.Clamp01(m_ElapsedTime / m_TotalTime);
@@ -70,7 +78,7 @@ namespace Suvankar
                 }
             }
 
-            if (Input.GetKeyUp(KeyCode.Space) && !m_IsAnimationCompleted)
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 m_ElapsedTime = 0.0f;
 
